@@ -44,14 +44,15 @@
       <div class="row">
 
         <div class="col-md-6">
-          <div class="pipe-links">
+          <nav role="navigation" class="pipe-links" aria-labelledby="primary-navigation">
+            <div class="sr-only" id="primary-navigation">Primary Menu</div>
             <ul class="list-inline m-0">
               <li class="list-inline-item"><a href="http://bit.ly/a11y-dev-champs">Champ Lessons</a>
               </li>
               <li class="list-inline-item">Good / Bad</li>
               <li class="list-inline-item"><a href="http://bit.ly/a11y-quiz">Quiz</a></li>
             </ul>
-          </div>
+          </nav>
         </div>
 
         <div class="col-md-6 pipe-rechts">
@@ -74,7 +75,9 @@
   </div>
 
   <div class="navbar navbar-toggleable-md navbar-light">
-    <nav role="navigation" class="container btn-annot-outline">
+    <nav role="navigation" aria-labelledby="secondary-navigation" class="container btn-annot-outline">
+      <div class="sr-only" id="secondary-navigation">Secondary Menu</div>
+
       <button type="button" class="btn btn-annot" data-toggle="modal" data-target="#annotModal04">
         04
       </button>
@@ -83,6 +86,7 @@
         <img class="avatar-img"
              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1182308/a11y-logo.png"
              alt="Logo Accessibility">
+          <span class="sr-only">Home page</span>
       </a>
 
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -93,31 +97,38 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <div class="mr-auto">
-          <div class="navbar-nav">
-            <div class="nav-item active">
+          <ul class="navbar-nav" aria-labelledby="secondary-navigation">
+            <li class="nav-item active">
               <button type="button" class="btn btn-annot" data-toggle="modal"
                       data-target="#annotModal06">06
               </button>
-              <a class="nav-link btn-annot-outline" href="index.html" id="main-menu">Home</a>
-              <div class="pagination pagination-navbar">
-                <div class="page-item"><a class="page-link" href="index.html">Good</a></div>
-                <div class="page-item"><a class="page-link active" href="index-bad.html">Bad</a>
-                </div>
-              </div>
-            </div>
-            <div class="nav-item">
+              <a class="nav-link btn-annot-outline" aria-current="page" href="index.html" id="main-menu">
+                Home
+                <span class="sr-only"> (current)</span>
+              </a>
+              <ul class="pagination pagination-navbar" aria-label="sub navigation items">
+                <li class="page-item"><a class="page-link" href="index.html">Good</a></li>
+                <li class="page-item">
+                  <a class="page-link active" aria-current="page" href="index-bad.html">
+                    Bad
+                    <span class="sr-only"> (current)</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="article.html">Article</a>
-            </div>
-            <div class="nav-item">
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="media.html">Media</a>
-            </div>
-            <div class="nav-item">
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="request.html">Request</a>
-            </div>
-            <div class="nav-item">
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="table.html">Tables</a>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
 
         <nav role="search" class="form-inline my-2 my-lg-0 btn-annot-outline">
@@ -130,7 +141,8 @@
                   data-target="#annotModal07">07
           </button>
           <button class="btn btn-tertiary search-button my-2 my-sm-0 ml-0 p-1" type="submit">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1182308/icon-search.png">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1182308/icon-search.png" alt="search icon">
+            <span class="sr-only">Search</span>
           </button>
         </nav>
 
